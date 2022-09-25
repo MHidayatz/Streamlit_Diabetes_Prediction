@@ -120,9 +120,8 @@ def run_ml_app():
     with st.expander("Prediction Results"):
         single_sample = np.array(encoded_result).reshape(1,-1)
         #st.write(single_sample)
-        model = load_model("models/logistic_regression_model_diabetes_21_oct_2020.pkl")
+        #model = load_model("models/logistic_regression_model_diabetes_21_oct_2020.pkl")
 
-        #model = load_model("https://github.com/MHidayatz/Streamlit_Diabetes_Prediction/blob/main/Deployment/models/logistic_regression_model_diabetes_21_oct_2020.pkl")
         prediction = model.predict(single_sample)
         pred_prob = model.predict_proba(single_sample)
         st.write(prediction)
