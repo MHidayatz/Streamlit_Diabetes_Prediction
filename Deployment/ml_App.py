@@ -123,8 +123,8 @@ def run_ml_app():
         #st.write(single_sample)
         #model = load_model("models/logistic_regression_model_diabetes_21_oct_2020.pkl")
 
-        prediction = model.predict(single_sample)
-        pred_prob = model.predict_proba(single_sample)
+        prediction = loaded_model.predict(single_sample)
+        pred_prob = loaded_model.predict_proba(single_sample)
         st.write(prediction)
         
         if prediction == 1:
