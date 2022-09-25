@@ -36,7 +36,7 @@ def explore(data):
 def run_eda_app():
     st.subheader("From Exploratory Data Analysis")
     #df = load_data(r"C:\Users\user\Documents\GitHub\Streamlit_Diabetes_Prediction\Data\diabetes_data_upload.csv")
-    df = load_data(r"https://github.com/MHidayatz/Streamlit_Diabetes_Prediction/blob/main/Data/diabetes_data_upload.csv")
+    df = load_data("https://github.com/MHidayatz/Streamlit_Diabetes_Prediction/blob/main/Data/diabetes_data_upload.csv")
     df_encoded = load_data(r"C:\Users\user\Documents\GitHub\Streamlit_Diabetes_Prediction\Data\diabetes_data_upload_clean.csv")
     freq_df = load_data(r"C:\Users\user\Documents\GitHub\Streamlit_Diabetes_Prediction\Data\freqdist_of_age_data.csv")
 
