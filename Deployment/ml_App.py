@@ -7,7 +7,7 @@ from streamlit_option_menu import option_menu
 import joblib
 import os
 import numpy as np
-import sklearn
+import sklearn as sk
 
 attrib_info = """
 #### Attribute Information:
