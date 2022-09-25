@@ -38,9 +38,9 @@ def run_eda_app():
     #df = load_data(r"C:\Users\user\Documents\GitHub\Streamlit_Diabetes_Prediction\Data\diabetes_data_upload.csv")
     #df_encoded = load_data(r"C:\Users\user\Documents\GitHub\Streamlit_Diabetes_Prediction\Data\diabetes_data_upload_clean.csv")
     #freq_df = load_data(r"C:\Users\user\Documents\GitHub\Streamlit_Diabetes_Prediction\Data\freqdist_of_age_data.csv")
-    df = load_data(r"https://raw.githubusercontent.com/MHidayatz/Streamlit_Diabetes_Prediction/main/Data/diabetes_data_upload.csv?token=GHSAT0AAAAAABYFMA5FKOW5GE225XC5D2SMYZQRFHA")
-    df_encoded = load_data(r"https://raw.githubusercontent.com/MHidayatz/Streamlit_Diabetes_Prediction/main/Data/diabetes_data_upload_clean.csv?token=GHSAT0AAAAAABYFMA5F76R3ZOGHWDB4UC3CYZQRGNA")
-    freq_df = load_data(r"https://raw.githubusercontent.com/MHidayatz/Streamlit_Diabetes_Prediction/main/Data/freqdist_of_age_data.csv?token=GHSAT0AAAAAABYFMA5F4XZLHQDMAQDJHI22YZQRG2A")
+    df = load_data("Data/diabetes_data_upload.csv")
+    df_clean = load_data("Data/diabetes_data_upload_clean.csv")
+    freq_df = load_data("Data/freqdist_of_age_data.csv")
 
     submenu = st.sidebar.selectbox("Submenu", ["Descriptive","Plots"])
     if submenu == "Descriptive":
