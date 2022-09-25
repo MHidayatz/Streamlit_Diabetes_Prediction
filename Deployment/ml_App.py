@@ -122,7 +122,7 @@ def run_ml_app():
         single_sample = np.array(encoded_result).reshape(1,-1)
         #st.write(single_sample)
         #model = load_model("models/logistic_regression_model_diabetes_21_oct_2020.pkl")
-
+        loaded_model = load_model("models/logistic_regression_model_diabetes_21_oct_2020.pkl")
         prediction = loaded_model.predict(single_sample)
         pred_prob = loaded_model.predict_proba(single_sample)
         st.write(prediction)
