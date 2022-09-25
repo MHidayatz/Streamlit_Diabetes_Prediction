@@ -29,7 +29,7 @@ def main():
     choice = option_menu(
         menu_title = None,
         options = menu,
-        icons = ["house", "book", "envelope"],
+        icons = ["house", "book", "robot", "envelope"],
         menu_icon = "cast",
         default_index = 0,
         orientation = "horizontal"
@@ -52,7 +52,8 @@ def main():
         run_ml_app()
     else:
         st.subheader("About")
-
+        st.text("Created by me, Md. Hidayat")
+        st.text("Classification problem for Diabetic evaluation")
 
 if __name__ == '__main__':
 	main()
