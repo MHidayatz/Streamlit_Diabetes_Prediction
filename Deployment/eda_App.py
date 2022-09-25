@@ -39,7 +39,7 @@ def run_eda_app():
     #df_encoded = load_data(r"C:\Users\user\Documents\GitHub\Streamlit_Diabetes_Prediction\Data\diabetes_data_upload_clean.csv")
     #freq_df = load_data(r"C:\Users\user\Documents\GitHub\Streamlit_Diabetes_Prediction\Data\freqdist_of_age_data.csv")
     df = load_data("Data/diabetes_data_upload.csv")
-    df_clean = load_data("Data/diabetes_data_upload_clean.csv")
+    df_encoded = load_data("Data/diabetes_data_upload_clean.csv")
     freq_df = load_data("Data/freqdist_of_age_data.csv")
 
     submenu = st.sidebar.selectbox("Submenu", ["Descriptive","Plots"])
