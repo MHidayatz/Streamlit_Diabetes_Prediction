@@ -23,6 +23,12 @@ html_temp = """
 		</div>
 		"""
 
+# Use local CSS file
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+local_css("Style/style.css")
+
 def main():
     stc.html(html_temp)
     menu = ["Home", "EDA", "ML", "About"]
@@ -52,8 +58,19 @@ def main():
         run_ml_app()
     else:
         st.subheader("About")
-        st.text("Created by me, Md. Hidayat")
-        st.text("Classification problem for Diabetic evaluation")
+        st.header(":mailbox: Get In Touch With Me!")
+        
+        contact_form = """
+        <form action="https://formsubmit.co/m.hidayatz86@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your message here"></textarea>
+        <button type="submit">Send</button>
+        </form>
+        """
 
+        st.markdown(contact_form, unsafe_allow_html=True)
+        st.write("Created with [Form Submit](https://formsubmit.co/)")
 if __name__ == '__main__':
 	main()
