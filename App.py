@@ -72,5 +72,6 @@ def main():
 
         st.markdown(contact_form, unsafe_allow_html=True)
         st.write("Created with [Form Submit](https://formsubmit.co/)")
+        
 if __name__ == '__main__':
 	main()

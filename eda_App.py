@@ -14,7 +14,7 @@ import seaborn as sns
 import plotly.express as px
 
 # Load Data
-@st.cache
+@st.cache_data
 def load_data(data):
     df = pd.read_csv(data)
     return df
@@ -46,9 +46,9 @@ def run_eda_app():
     if submenu == "Descriptive":
         st.dataframe(df)
 
-        with st.expander("Data Types"):
-            dtype = explore(df)
-            st.write(dtype)
+        # with st.expander("Data Types"):
+        #     dtype = explore(df)
+        #     st.write(dtype)
 
         with st.expander("Descriptive Summary"):
             st.dataframe(df_encoded.describe())
